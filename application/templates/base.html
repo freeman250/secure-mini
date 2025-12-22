@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}SecureMe Mini{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="logo">S</div>
+      <div>
+        <h1>SecureMe Mini</h1>
+        <p>Simple cybersecurity habits</p>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/tips">Security Tips</a>
+      <a href="/checklist">Checklist</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    {% block content %}{% endblock %}
+  </div>
+  <div class="footer">Flask • Docker • ECR • ECS + ALB</div>
+</main>
+
+</body>
+</html>
+
