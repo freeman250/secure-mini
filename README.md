@@ -1,7 +1,113 @@
-# SecureMe Mini – Final Project Application
+Perfect — you now have **all the evidence** needed. Let’s rewrite a **clean, professional README.md** that:
 
-SecureMe Mini is a simple cloud-based web application focused on promoting basic cybersecurity habits. The application provides short security tips and a checklist to help users improve their online safety.
+* Explains the project clearly
+* Matches what you actually built
+* Looks good to **lecturers and recruiters**
+* Aligns with your screenshots (Docker → ECR → ECS → ALB → S3)
 
-The app is built using Python and Flask, containerized with Docker, and deployed on Amazon Web Services. The Docker image is stored in Amazon Elastic Container Registry (ECR) and the application is run using Amazon Elastic Container Service (ECS) behind an Application Load Balancer. Static assets, such as the banner image, are hosted on Amazon S3 and configured using environment variables.
+You can **copy-paste this directly into README.md**.
 
-This project demonstrates containerization, cloud deployment, and integration of multiple AWS services in a real-world application.
+---
+
+# SecureMe Mini
+
+**Simple Cybersecurity Habits Web Application**
+
+## 📌 Project Overview
+
+SecureMe Mini is a lightweight web application designed to promote basic cybersecurity best practices.
+The application presents users with short security tips and a checklist, helping them build safer online habits in a simple and accessible way.
+
+The project demonstrates how a containerized Flask application can be built, stored, and deployed using core Amazon Web Services.
+
+---
+
+## 🧩 Application Features
+
+* Three pages: **Home**, **Security Tips**, and **Checklist**
+* Banner image loaded dynamically from **Amazon S3**
+* Environment-based configuration (no hardcoded cloud resources)
+* Containerized using **Docker**
+* Deployed on **Amazon ECS** with **Application Load Balancer**
+* Publicly accessible through a single ALB DNS URL
+
+---
+
+## 🏗️ Architecture Overview
+
+The application uses the following AWS services:
+
+* **Docker** – Packages the Flask application into a container image
+* **Amazon ECR (Elastic Container Registry)** – Stores the Docker image
+* **Amazon ECS (Elastic Container Service)** – Runs the container as a managed service
+* **Application Load Balancer (ALB)** – Routes HTTP traffic to the running container
+* **Amazon S3** – Hosts the static banner image used by the application
+
+All services work together to deliver a scalable and reliable cloud-based deployment.
+
+---
+
+## 📁 Project Structure
+
+```text
+.
+├── application/
+│   ├── app.py
+│   ├── templates/
+│   └── static/
+├── infrastructure/
+│   ├── Dockerfile
+│   └── build.sh
+├── README.md
+```
+
+* `application/` – Flask application source code
+* `infrastructure/` – Docker and deployment-related files
+* `README.md` – Project documentation
+
+---
+
+## 🐳 Docker Build & Push (Example)
+
+```bash
+docker build -t secureme-mini -f infrastructure/Dockerfile .
+docker tag secureme-mini:latest 541373007083.dkr.ecr.us-east-1.amazonaws.com/secureme-mini:latest
+docker push 541373007083.dkr.ecr.us-east-1.amazonaws.com/secureme-mini:latest
+```
+
+---
+
+## 🚀 Deployment
+
+* The Docker image is deployed to **Amazon ECS** as a service
+* The service runs one task behind an **Application Load Balancer**
+* The application is accessed using the **ALB DNS URL**
+* Static banner image is fetched from **Amazon S3** using environment variables
+
+---
+
+## 🌐 Live Application
+
+The application is accessible through the Application Load Balancer DNS URL provided by AWS after deployment.
+
+---
+
+## 🎓 Course Context
+
+This project was developed as part of the course:
+
+**Creation and Administration of Cloud Based Application, 2025**
+
+It demonstrates practical usage of containerization and cloud deployment concepts covered during the course.
+
+---
+class 2025
+
+Fred Junior NTWALI
+
+<img width="975" height="482" alt="ac563b37-f627-4d41-8bf2-322527b296bd" src="https://github.com/user-attachments/assets/28eba687-78d6-4ab8-8465-f4d8f94dabaa" />
+<img width="975" height="546" alt="a86ff024-afb0-47b3-b874-7b5a260fb4fd" src="https://github.com/user-attachments/assets/04f7f92c-368b-4423-8fdd-4c72b395f9d2" />
+<img width="975" height="550" alt="338625d5-c253-4d4c-81eb-d9a05ac55ea9" src="https://github.com/user-attachments/assets/6dca1de5-63c2-4188-bcbb-27d43868faa8" />
+<img width="975" height="545" alt="aa8e5db8-4ed1-4a70-95e1-b2ce743de97a" src="https://github.com/user-attachments/assets/a2b97a6c-e251-426a-a279-5b2ca6d25b5f" />
+
+
