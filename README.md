@@ -99,4 +99,24 @@ Fred Junior NTWALI
 <img width="975" height="550" alt="338625d5-c253-4d4c-81eb-d9a05ac55ea9" src="https://github.com/user-attachments/assets/6dca1de5-63c2-4188-bcbb-27d43868faa8" />
 <img width="975" height="545" alt="aa8e5db8-4ed1-4a70-95e1-b2ce743de97a" src="https://github.com/user-attachments/assets/a2b97a6c-e251-426a-a279-5b2ca6d25b5f" />
 
+📘 Project Disclaimer
+
+This project was developed as part of a university course assignment.
+
+The initial structure was provided through a private course starter template, which is not publicly accessible.
+
+I independently implemented and extended the application by:
+
+Designing and refining the user interface
+
+Containerizing the Flask application with Docker
+
+Deploying the application to Amazon ECS behind an Application Load Balancer (ALB)
+
+Integrating static assets hosted on Amazon S3, configured via environment variables
+
+Managing container images using Amazon ECR
+
+This public repository represents my own work and adaptations built on top of the original academic starter template.
+
 
