@@ -102,6 +102,5 @@ Fred Junior NTWALI
 
 
 📘 Project Disclaimer
-This project was created as part of a university assignment using a private course starter template. I extended the original setup by implementing the application logic, containerizing the app, and deploying it on AWS using ECS, ECR, ALB, and S3.
 
-
+This project was created as part of a university course assignment (“Creation and Administration of Cloud Based Application, 2025”). It was initially based on a course-provided starter template (private classroom repository). I extended it by improving the UI, containerizing the Flask app with Docker, deploying it to Amazon ECS behind an Application Load Balancer, and loading static assets from Amazon S3 via environment variables.
